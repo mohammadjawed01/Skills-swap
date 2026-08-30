@@ -48,14 +48,16 @@ body {
     border-radius: 11px;
     background: linear-gradient(135deg, #6157ff, #a855f7);
     color: white;
-
+    transition: transform 0.3s ease;
 }
 
 .logo span {
     color: #6157ff;
 }
 
-
+.logo b:hover {
+    transform: rotate(360deg);
+}
 
 a {
     text-decoration: none;
@@ -78,6 +80,22 @@ a {
     position: relative;
 }
 
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #6157ff;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
 .action {
     display: flex;
     gap: 8px;
@@ -97,7 +115,11 @@ a {
     color: #f5f7fb;
     cursor: pointer;
     text-align: center;
+    transition: transform 0.3s ease;
+}
 
+.action button:hover {
+    transform: translateY(-5px);
 }
 
 .action #profile {
