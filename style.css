@@ -9,13 +9,20 @@ body {
     width: 100%;
     height: 100vh;
     font-family: Inter, sans-serif;
-    background-color: darkblue;
+    background-color: #ffffff;
+    color: #222222;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark{
+    background-color:#a855f7 ;
+    color: #ffffff;
 }
 
 .header-section {
-    height: 80px;
+    height: 70px;
     width: 100%;
-    background-color: rgba(9, 13, 24, .62);
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,9 +33,19 @@ body {
     justify-content: space-between;
     z-index: 100;
     padding: 0 5%;
-    border-bottom: 2px solid #273249;
+    border-bottom: 1px solid #dad8f5;
+    transition: background-color 0.5s, color 0.5s;
 }
 
+body.dark .header-section{
+    background-color: rgba(9, 13, 24, .62);
+    border-bottom: 1px solid #9e99e9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .logo {
     height: 40px;
@@ -37,6 +54,11 @@ body {
     font-size: 1.12rem;
     display: flex;
     align-items: center;
+    color: black;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark .logo{
     color: white;
 }
 
@@ -59,11 +81,6 @@ body {
     transform: rotate(360deg);
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .links {
     margin: auto;
     max-width: 600px;
@@ -74,10 +91,14 @@ a {
 
 .links a {
     padding: 7px 2px;
-    color: #98a5ba;
+    color: #8b97ac;
     font-weight: 600;
     font-size: .88rem;
     position: relative;
+}
+
+.links a:hover{
+    color: #6157ff;
 }
 
 .links a::after {
@@ -105,13 +126,22 @@ a {
     backdrop-filter: blur(10px);
 }
 
+.action button #theme{
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+}
+
+body.dark #theme {
+    background-color: #111827;
+    color: white;
+    border-color: #222e46;
+}
 
 .action button {
     height: 40px;
     width: 40px;
-    border: 1px solid #273249;
+    border: 1px solid  rgb(224, 222, 222);
     border-radius: 12px;
-    background-color: #111827;
+    background-color: #ffffff;
     color: #f5f7fb;
     cursor: pointer;
     text-align: center;
@@ -128,3 +158,5 @@ a {
     font-weight: 800;
     background: #6157ff;
 }
+
+/* body sextion */
