@@ -78,7 +78,7 @@ body.dark .logo{
 }
 
 .logo b:hover {
-    transform: rotate(360deg);
+    transform: scale(1.1) rotate(360deg);
 }
 
 .links {
@@ -126,16 +126,6 @@ body.dark .logo{
     backdrop-filter: blur(10px);
 }
 
-.action button #theme{
-    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
-}
-
-body.dark #theme {
-    background-color: #111827;
-    color: white;
-    border-color: #222e46;
-}
-
 .action button {
     height: 40px;
     width: 40px;
@@ -157,6 +147,16 @@ body.dark #theme {
     border-radius: 50%;
     font-weight: 800;
     background: #6157ff;
+}
+
+.action button #theme{
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+}
+
+body.dark #theme {
+    background-color: #111827;
+    color: white;
+    border-color: #222e46;
 }
 
 /* body sextion */
