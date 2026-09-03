@@ -1,3 +1,4 @@
+// theme button change the dark and light mode
 let theme = document.querySelector("#theme");
 theme.addEventListener('click', function(){
     document.body.classList.toggle("dark");
@@ -9,4 +10,4 @@ theme.addEventListener('click', function(){
     }
 })
 
-let profile = document.querySelector("#profile");
+// for the model/profile section
