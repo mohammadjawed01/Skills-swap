@@ -165,14 +165,13 @@ body.dark #theme {
 
 /* body sextion */
 .hero {
-    padding-top: 140px;
+    padding-top: 170px;
     padding-left: 70px;
     height: 100vh;
     width: 100%;
 }
 
 .hero-copy {
-    padding-top: 60px;
     height: 600px;
     width: 50%;
 }
@@ -253,13 +252,13 @@ h1 em {
     animation: fadeUpSoft .9s .35s both;
 }
 
-@keyframes fadeUpSoft{
-    0%{
+@keyframes fadeUpSoft {
+    0% {
         opacity: 0;
         transform: translateY(20px);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: none;
     }
@@ -288,9 +287,26 @@ h1 em {
     transition: transform .3s ease;
 }
 
+.btn:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, #fff5, transparent);
+    transform: skewX(-20deg);
+    transition: .55s;
+}
+
+.btn:hover:after {
+    left: 150%;
+}
+
 .btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 25, 75, 1.2);
+    transform: translateY(-3px);
+    /* box-shadow: 0 4px 10px rgba(0, 25, 75, 1.2); */
+    box-shadow: 0 15px 30px #635bff30;
 }
 
 .primary {
