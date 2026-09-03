@@ -78,7 +78,7 @@ body.dark .logo{
     color: #6157ff;
 }
 
-.logo:hover b{
+.logo b:hover {
     transform: scale(1.08) rotate(180deg);
     box-shadow: 0 0 25px #635bff66;
 }

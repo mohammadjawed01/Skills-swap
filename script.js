@@ -10,5 +10,3 @@ theme.addEventListener('click', function(){
 })
 
 let profile = document.querySelector("#profile");
-
-
