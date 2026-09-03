@@ -14,8 +14,9 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 
-body.dark{
-    background-color:#a855f7 ;
+body.dark {
+    /* background-color: #a855f7; */
+    background-color: darkblue;
     color: #ffffff;
 }
 
@@ -37,7 +38,7 @@ body.dark{
     transition: background-color 0.5s, color 0.5s;
 }
 
-body.dark .header-section{
+body.dark .header-section {
     background-color: rgba(9, 13, 24, .62);
     border-bottom: 1px solid #9e99e9;
 }
@@ -58,7 +59,7 @@ a {
     transition: background-color 0.5s, color 0.5s;
 }
 
-body.dark .logo{
+body.dark .logo {
     color: white;
 }
 
@@ -99,7 +100,7 @@ body.dark .logo{
     position: relative;
 }
 
-.links a:hover{
+.links a:hover {
     color: #6157ff;
 }
 
@@ -131,7 +132,7 @@ body.dark .logo{
 .action button {
     height: 40px;
     width: 40px;
-    border: 1px solid  rgb(224, 222, 222);
+    border: 1px solid rgb(224, 222, 222);
     border-radius: 12px;
     background-color: #ffffff;
     color: #f5f7fb;
@@ -151,7 +152,7 @@ body.dark .logo{
     background: #6157ff;
 }
 
-.action button #theme{
+.action button #theme {
     transition: background-color 0.5s, color 0.5s, border-color 0.5s;
 }
 
@@ -162,3 +163,53 @@ body.dark #theme {
 }
 
 /* body sextion */
+.hero {
+    position: relative;
+    top: 70px;
+    left: 80px;
+}
+
+.hero-copy {
+    height: 600px;
+    width: 50%;
+    margin-top: 70px;
+}
+
+.hero-copy .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(97, 87, 255, .18);
+    background: linear-gradient(180deg, rgba(97, 87, 255, .09), rgba(97, 87, 255, .035));
+    border-radius: 999px;
+    padding: 8px 12px;
+    box-shadow: 0 10px 25px rgba(97, 87, 255, .08);
+}
+
+.pill,
+label {
+    font-size: .7rem;
+    letter-spacing: .13rem;
+    font-weight: 800;
+    color: #6157ff;
+    margin-bottom: 20px;
+}
+
+.hero-copy h1 {
+    font-size: 6.3vw;
+    line-height: .97;
+    letter-spacing: -.072em;
+    max-width: 900px;
+}
+
+.hero-copy h1 em {
+    background: linear-gradient(110deg, #5d56ff 8%, #8b5cf6 48%, #22d3ee 92%);
+    background-size: 220% auto;
+    animation: textFlow 8s linear infinite;
+    background-clip: text;
+}
+
+h1 em {
+    font-style: normal;
+    color: transparent;
+}
