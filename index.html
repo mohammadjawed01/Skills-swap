@@ -37,7 +37,9 @@
     <!-- body sextion -->
     <main>
         <section class="hero" id="home">
-            <div class="hero-copy reveal show">
+            <div class="hero-noise"></div>
+            <div class="grid-bg"></div>
+            <div class="hero-copy reveal show" data-o="1" style="transition-delay: 0s;">
                 <div class="pill">✦ PEER-TO-PEER LEARNING</div>
                 <h1>
                     Share what you know.
@@ -70,32 +72,37 @@
                 </div>
             </div>
 
-            <div class="floating-chip top">⚡ 86% average match</div>
-            <div class="hero-card">
-                <div class="card-head">
-                    <span>SMART MATCH</span>
-                    <strong>100%</strong>
-                </div>
-                <div class="person">
-                    <div class="avatar">P</div>
-                    <div>
-                        <b>Zubair</b>
-                        <small>Frontend Developer</small>
+            <div class="hero-card-warp reveal delay show" data-o="1" style="transition-delay: 0s;">
+                <div class="floating-chip top">⚡ 86% average match</div>
+                <div class="hero-card">
+                    <div class="card-head">
+                        <span>SMART MATCH</span>
+                        <strong>100%</strong>
                     </div>
-                    <i></i>
-                </div>
-                <div class="swap">
-                    <div>
-                        <small>You teach</small>
-                        <b>Photoshop</b>
+                    <div class="person">
+                        <div class="avatar">Z</div>
+                        <div>
+                            <b>Zubair</b>
+                            <small>Frontend Developer</small>
+                        </div>
+                        <i></i>
                     </div>
-                    <span>⇄</span>  
-                    <div>
-                        <small>You learn</small>
-                        <b>JavaScript</b>
+                    <div class="swap">
+                        <div>
+                            <small>You teach</small>
+                            <b>Photoshop</b>
+                        </div>
+                        <span>⇄</span>
+                        <div>
+                            <small>You learn</small>
+                            <b>JavaScript</b>
+                        </div>
                     </div>
+                    <button class="btn primary full" onclick="location.hash='matches'">
+                        View Compatible Peer
+                    </button>
                 </div>
-                <button class="btn primary full">View Compatible Peer</button>
+                <div class="floating-chip bottom">↗ 120+ active learners</div>
             </div>
         </section>
     </main>
