@@ -340,13 +340,13 @@ h1 em {
     color: #667085;
 }
 
-.floating-chip.top{
-    top: 32%;
+.floating-chip.top {
+    top: 30%;
     right: 4%;
     animation-delay: .4s;
 }
 
-.floating-chip{
+.floating-chip {
     position: absolute;
     border-color: rgba(255, 255, 255, .72);
     border-radius: 14px;
@@ -359,17 +359,70 @@ h1 em {
     animation: chipFloat 5.5s ease-in-out infinite;
 }
 
-@keyframes chipFloat{
-    0%, 100%{
+@keyframes chipFloat {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0);
     }
-    50%{
+
+    50% {
         transform: translateY(-10px) rotate(1deg);
     }
 }
 
-body.dark .floating-chip{
+body.dark .floating-chip {
     background-color: rgba(17, 24, 39, .74);
     border-color: #2c3550;
 }
 
+.hero-card {
+    position: absolute;
+    height: 380px;
+    width: 450px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, .9));
+    border: 1px solid rgba(255, 255, 255, .9);
+    top: 36%;
+    right: 6%;
+    border-radius: 32px;
+    box-shadow: 0 35px 100px rgba(40, 31, 108, .16),
+        0 0 0 1px rgba(97, 87, 255, .06) inset;
+    padding: 30px;
+    backdrop-filter: blur(18px);
+    transform-style: preserve-3d;
+    animation: heroCardFloat 7s ease-in-out infinite;
+    transition: transform .25s ease, box-shadow .3s;
+}
+
+body.dark .hero-card{
+    background: linear-gradient(145deg, rgba(19, 27, 47, .92));
+    border-color: #293455;
+    box-shadow: 0 35px 100px rgba(0, 0, 0, .36), 0 0 0 1px rgba(129, 140, 248, .08) inset;
+}
+
+@keyframes heroCardFloat {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotateZ(0);
+    }
+
+    50% {
+        transform: translate3d(0, -12px, 0) rotateZ(-.4deg);
+    }
+}
+
+.hero-card::before{
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 31px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .75)), 
+    transparent 34%, rgba(97, 87, 255, .07) 74%, rgba(34, 211, 238, .08);
+    pointer-events: none;
+}
+
+.hero-card:hover{
+    box-shadow: 0 40px 120px rgba(40, 31, 108, .23),
+    0 0 50px rgba(97, 87, 255, .10);
+}
