@@ -12,6 +12,7 @@ body {
     background-color: #ffffff;
     color: #222222;
     transition: background-color 0.5s, color 0.5s;
+    overflow-x: hidden;
 }
 
 body.dark {
@@ -338,3 +339,37 @@ h1 em {
     font-size: .85rem;
     color: #667085;
 }
+
+.floating-chip.top{
+    top: 32%;
+    right: 4%;
+    animation-delay: .4s;
+}
+
+.floating-chip{
+    position: absolute;
+    border-color: rgba(255, 255, 255, .72);
+    border-radius: 14px;
+    padding: 12px 18px;
+    font-size: .68rem;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, .75);
+    box-shadow: 0 18px 35px rgba(32, 23, 94, .12);
+    backdrop-filter: blur(16px);
+    animation: chipFloat 5.5s ease-in-out infinite;
+}
+
+@keyframes chipFloat{
+    0%, 100%{
+        transform: translateY(0) rotate(0);
+    }
+    50%{
+        transform: translateY(-10px) rotate(1deg);
+    }
+}
+
+body.dark .floating-chip{
+    background-color: rgba(17, 24, 39, .74);
+    border-color: #2c3550;
+}
+
