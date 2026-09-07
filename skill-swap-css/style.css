@@ -660,7 +660,7 @@ body.dark .hero-card {
 }
 
 .heading {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .heading label {
@@ -678,7 +678,68 @@ body.dark .hero-card {
     line-height: 1.08;
 }
 
-.heading p{
+.heading p {
     max-width: 650px;
     color: #98a5ba;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.feature {
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 22px;
+    border: 1px solid #273249;
+    background-color: #111827;
+    position: relative;
+}
+
+.feature span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: 800;
+    color: #c6cad5;
+}
+
+.icon {
+    height: 48px;
+    width: 48px;
+    background-color: #eeecff;
+    border-radius: 14px;
+    color: #6157ff;
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 22px;
+}
+
+.steps h3 {
+    display: block;
+    font-size: 1.17rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.steps p {
+    font-size: .86rem;
+    color: #98a5ba;
+    margin-top: 8px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
