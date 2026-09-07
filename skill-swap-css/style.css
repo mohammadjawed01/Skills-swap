@@ -180,7 +180,7 @@ body.dark #theme {
 }
 
 /* body sextion */
-section{
+section {
     unicode-bidi: isolate;
 }
 
@@ -219,13 +219,14 @@ main {
     min-height: 760px;
     grid-template-columns: minmax(0, 1.06fr)minmax(360px, .94fr);
     gap: 85px;
-    background: radial-gradient(circle at 76% 34%, 
-    rgba(97, 87, 255, .16), transparent 28%), 
-    radial-gradient(circle at 86% 70%, 
-    rgba(168, 85, 247, .10), transparent 24%);
+    background: radial-gradient(circle at 76% 34%,
+            rgba(97, 87, 255, .16), transparent 28%),
+        radial-gradient(circle at 86% 70%,
+            rgba(168, 85, 247, .10), transparent 24%);
     display: grid;
     align-items: center;
-    position: relative;isolation: isolate;
+    position: relative;
+    isolation: isolate;
 }
 
 .hero-copy {
@@ -647,4 +648,37 @@ body.dark .hero-card {
     left: -10%;
     bottom: 9%;
     animation-delay: 1.2s;
+}
+
+
+/* second phase */
+.section {
+    padding: 100px 7.55%;
+    display: block;
+    width: 100%;
+    scroll-margin-top: 70px;
+}
+
+.heading {
+    margin-bottom: 60px;
+}
+
+.heading label {
+    font-size: .77rem;
+    letter-spacing: .13rem;
+    font-weight: 800;
+    color: #6157ff;
+}
+
+.heading h2 {
+    margin: 10px 0;
+    font-weight: 800;
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    letter-spacing: -.045rem;
+    line-height: 1.08;
+}
+
+.heading p{
+    max-width: 650px;
+    color: #98a5ba;
 }
