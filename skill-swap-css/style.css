@@ -43,7 +43,7 @@ body.dark {
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0;
@@ -686,7 +686,13 @@ body.dark .hero-card {
 .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 22px;
+    transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s;
+}
+
+.steps article:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(11, 9, 32, 0.55);
 }
 
 .feature {
@@ -694,8 +700,27 @@ body.dark .hero-card {
     overflow: hidden;
     border-radius: 22px;
     border: 1px solid #273249;
-    background-color: #111827;
     position: relative;
+}
+
+.feature::before {
+    content: "";
+    position: absolute;
+    inset: -60% auto auto -20%;
+    width: 180px;
+    height: 180px;
+    background: rgba(97, 87, 255, .09);
+    filter: blur(40px);
+    transition: .5s;
+}
+
+.feature,
+.skill,
+.match,
+.stat,
+.panel,
+.profile-card {
+    box-shadow: 0 8px 30px rgba(31, 41, 55, .04);
 }
 
 .feature span {
@@ -716,6 +741,16 @@ body.dark .hero-card {
     place-items: center;
     font-size: 1.3rem;
     margin-bottom: 22px;
+    transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s;
+}
+
+.feature .icon:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(11, 9, 32, 0.55);
+}
+
+.feature .icon {
+    transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s;
 }
 
 .steps h3 {
