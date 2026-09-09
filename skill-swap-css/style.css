@@ -661,6 +661,8 @@ body.dark .hero-card {
 
 .heading {
     margin-bottom: 40px;
+    animation: headingFadeUpSoft 1.05s .85s both;
+    
 }
 
 .heading label {
@@ -670,6 +672,7 @@ body.dark .hero-card {
     color: #6157ff;
 }
 
+
 .heading h2 {
     margin: 10px 0;
     font-weight: 800;
@@ -678,10 +681,12 @@ body.dark .hero-card {
     line-height: 1.08;
 }
 
+
 .heading p {
     max-width: 650px;
     color: #98a5ba;
 }
+
 
 .steps {
     display: grid;
@@ -701,6 +706,21 @@ body.dark .hero-card {
     border-radius: 22px;
     border: 1px solid #273249;
     position: relative;
+    animation: headingFadeUpSoft 1.05s .85s both;
+}
+
+@keyframes headingFadeUpSoft {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
 }
 
 .feature::before {
