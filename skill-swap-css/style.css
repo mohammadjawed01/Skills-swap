@@ -217,6 +217,7 @@ main {
 .hero {
     padding: 110px 8% 130px;
     min-height: 760px;
+    margin-top: 80px;
     grid-template-columns: minmax(0, 1.06fr)minmax(360px, .94fr);
     gap: 85px;
     background: radial-gradient(circle at 76% 34%,
@@ -662,7 +663,7 @@ body.dark .hero-card {
 .heading {
     margin-bottom: 40px;
     animation: headingFadeUpSoft 1.05s .85s both;
-    
+
 }
 
 .heading label {
@@ -676,7 +677,7 @@ body.dark .hero-card {
 .heading h2 {
     margin: 10px 0;
     font-weight: 800;
-    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: -.045rem;
     line-height: 1.08;
 }
@@ -695,7 +696,7 @@ body.dark .hero-card {
     transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s;
 }
 
-.steps article:hover{
+.steps article:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 12px 20px rgba(11, 9, 32, 0.55);
 }
@@ -797,4 +798,55 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
+}
+
+/* third */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+}
+
+.search {
+    width: 360px;
+    background-color: #fff;
+    border: 1px solid #e4e7ef;
+    padding: 0px 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: .25s;
+    border-radius: 12px;
+}
+
+.search input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: #111827;
+    padding: 13px 0;
+}
+
+.search:focus-within {
+    box-shadow: 0 0 0 4px #635bff13;
+    border-color: #b9b5ff;
+    transform: translateY(-2px);
+}
+
+body.dark .search{
+    background-color: darkblue;
+    color: #ffffff;
+    border: 1px solid #273249;
+}
+body.dark .search input{
+    color: #f5f7fb;
+}
+
+body.dark.search:focus-within {
+    box-shadow: 0 0 0 4px #635bff13;
+    border-color: #b9b5ff;
+    transform: translateY(-2px);
 }
