@@ -841,6 +841,7 @@ body.dark .search{
     color: #ffffff;
     border: 1px solid #273249;
 }
+
 body.dark .search input{
     color: #f5f7fb;
 }
@@ -849,4 +850,40 @@ body.dark.search:focus-within {
     box-shadow: 0 0 0 4px #635bff13;
     border-color: #b9b5ff;
     transform: translateY(-2px);
+}
+
+.cats{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.cat {
+    border:1px solid #e4e7ef;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .75rem;
+    cursor: pointer;
+    transition: .2s;
+    color: #667085;
+}
+
+button, input{
+    font: inherit;
+}
+
+.cat:hover, 
+.cat.active{
+    background: #6157ff;
+    color: white;
+    border-color: #6157ff;
+    transform: translateY(-2px);
+}
+
+body.dark .cat{
+    background-color: darkblue;
+    color: #667085;
+    border: 1px solid #273249;
 }
