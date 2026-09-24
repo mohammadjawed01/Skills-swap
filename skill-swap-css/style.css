@@ -801,6 +801,9 @@ p {
 }
 
 /* third */
+.tented {
+    background: #f0f1f8;
+}
 
 .row {
     display: flex;
@@ -886,4 +889,57 @@ body.dark .cat{
     background-color: darkblue;
     color: #667085;
     border: 1px solid #273249;
+}
+
+article{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.skill-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.skill{
+    border-radius: 20px;
+    padding: 22px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e4e7ef;
+    background: #fff;
+}
+
+.skill .sym {
+    transition: transform .35s, color .35s;
+}
+
+.skill .sym {
+    font-size: 1.4rem;
+}
+
+.skill h3{
+    margin: 12px 0 5px;
+}
+
+.skill p {
+    font-size: .75rem;
+    color: #667085;
+}
+
+.skill button {
+    margin-top: 15px;
+}
+
+.small {
+    padding: 8px 11px;
+    font-size: .72REM;
+    border: 1px solid #e4e7ef;
+    background: #f0f1f8;
+    border-radius: 9px;
+    color: #111827;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
 }
