@@ -923,6 +923,10 @@ article{
     margin: 12px 0 5px;
 }
 
+body.dark .skill h3{
+    color: white;
+}
+
 .skill p {
     font-size: .75rem;
     color: #667085;
@@ -941,5 +945,18 @@ article{
     color: #111827;
     font-weight: 700;
     cursor: pointer;
-    transition: .2s;
+    transition: .5s;
+}
+
+body.dark .skill{
+    background-color: darkblue;
+    color: #667085;
+    border: 1px solid #273249;
+}
+
+
+body.dark .skill button{
+    background-color: darkblue;
+    color: #ffffffff;
+    border: 1px solid #273249;
 }
