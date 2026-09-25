@@ -20,5 +20,3 @@ theme.addEventListener('click', function(){
         localStorage.setItem("theme", "light");
     }
 })
-
-
