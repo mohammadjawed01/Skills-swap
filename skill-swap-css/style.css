@@ -9,7 +9,7 @@ body {
     width: 100%;
     height: 100vh;
     font-family: Inter, sans-serif;
-    background-color: #ffffff;
+    background-color: #F3F4EE;
     color: #222222;
     transition: background-color 0.5s, color 0.5s;
     overflow-x: hidden;
@@ -32,7 +32,7 @@ h1 {
 
 body.dark {
     /* background-color: #a855f7; */
-    background-color: darkblue;
+    background-color: #060707;
     color: #ffffff;
 }
 
@@ -801,8 +801,8 @@ p {
 }
 
 /* third */
-.tented {
-    background: #f0f1f8;
+body.dark .tinted {
+    background: #0C0D0D;
 }
 
 .row {
@@ -840,7 +840,7 @@ p {
 }
 
 body.dark .search {
-    background-color: darkblue;
+    background-color: #29342D;
     color: #ffffff;
     border: 1px solid #273249;
 }
@@ -871,6 +871,7 @@ body.dark.search:focus-within {
     cursor: pointer;
     transition: .2s;
     color: #667085;
+    background: transparent;
 }
 
 button,
@@ -886,11 +887,11 @@ input {
     transform: translateY(-2px);
 }
 
-body.dark .cat {
-    background-color: darkblue;
+/* body.dark .cat {
+    background-color: #29342D;
     color: #667085;
     border: 1px solid #273249;
-}
+} */
 
 article {
     display: block;
@@ -909,14 +910,18 @@ article {
     position: relative;
     overflow: hidden;
     border: 1px solid #e4e7ef;
-    background: #fff;
+    background: transparent;
     transition: .3s;
+}
+
+body.dark .skill{
+    border: 1px solid #493f3f;
 }
 
 body.dark .skill:hover {
     transform: translateY(-7px);
     box-shadow: 0 12px 20px rgba(11, 9, 32, 0.55);
-    border: 1px solid #c9c6ff;
+    
 }
 
 .skill:hover {
@@ -971,12 +976,14 @@ body.dark .skill h3 {
 }
 
 body.dark .skill button:hover{
-    border: 1px solid #71ebd0;
+    border: 1px solid #6b6257;
 }
 .skill button:hover{
     /* transform: translateY(-2px); */
+    background: #29342D;
+    color: #ffffffff;
     box-shadow: 0 12px 20px rgba(11, 9, 32, 0.55);
-    border: 1px solid #9af8e4;
+    border: 1px solid #5f6d64;
 }
 
 .skill:after {
@@ -1003,14 +1010,14 @@ body.dark .skill button:hover{
     transition: .5s;
 }
 
-body.dark .skill {
-    background-color: darkblue;
-    color: #667085;
-    border: 1px solid #273249;
-}
+    /* body.dark .skill {
+        background-color: #29342D;
+        color: #667085;
+        border: 1px solid #273249;
+    } */
 
 body.dark .skill button {
-    background-color: darkblue;
+    background-color: #29342D;
     color: #ffffffff;
-    border: 1px solid #273249;
+    border: 1px solid transparent;
 }
