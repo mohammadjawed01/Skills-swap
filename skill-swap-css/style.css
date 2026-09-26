@@ -863,7 +863,7 @@ body.dark.search:focus-within {
 }
 
 .cat {
-    border: 1px solid #e4e7ef;
+    border: 1px solid #868686;
     padding: 8px 14px;
     border-radius: 999px;
     font-weight: 700;
@@ -881,9 +881,9 @@ input {
 
 .cat:hover,
 .cat.active {
-    background: #6157ff;
+    background: #F59E0B;
     color: white;
-    border-color: #6157ff;
+    border-color: #bb7a0a;
     transform: translateY(-2px);
 }
 
@@ -946,12 +946,12 @@ body.dark .skill:hover {
 
 .skill:hover .sym{
     transform: translateY(-6px);
-    color: #6157ff;
+    color: #F59E0B;
 }
 
 body.dark .skill:hover .sym{
     transform: translateY(-6px);
-    color: #6157ff;
+    color: #F59E0B;
 }
 
 body.dark .skill .sym {
@@ -993,7 +993,7 @@ body.dark .skill button:hover{
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: rgba(97, 87, 255, .08);
+    background: rgba(255, 168, 69, 0.08);
     filter: blur(20px);
     transition: .4s;
 }
