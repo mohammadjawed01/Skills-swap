@@ -87,18 +87,20 @@ body.dark .logo {
     place-items: center;
     text-align: center;
     border-radius: 11px;
-    background: linear-gradient(135deg, #6157ff, #a855f7);
+    /* background: linear-gradient(135deg, #6157ff, #a855f7); */
+    /* background: linear-gradient(135deg, #FF7A18, #FF3D81); */
+    background: linear-gradient(135deg, #FBBF24, #F59E0B, #C2410C);
     color: white;
     transition: .4s;
 }
 
 .logo span {
-    color: #6157ff;
+    color: #FBBF24;
 }
 
 .logo b:hover {
     transform: scale(1.08) rotate(180deg);
-    box-shadow: 0 0 25px #635bff66;
+    box-shadow: 0 0 25px #FBBF24;
 }
 
 .links {
@@ -118,7 +120,7 @@ body.dark .logo {
 }
 
 .links a:hover {
-    color: #6157ff;
+    color: #FBBF24;
 }
 
 .links a::after {
@@ -128,7 +130,7 @@ body.dark .logo {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background: #6157ff;
+    background: #F59E0B;
     transform: translateX(-50%);
     transition: width 0.3s ease;
 }
@@ -239,11 +241,16 @@ main {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    border: 1px solid rgba(97, 87, 255, .18);
-    background: linear-gradient(180deg, rgba(97, 87, 255, .09), rgba(97, 87, 255, .035));
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    ;
+    /* background: linear-gradient(180deg, rgba(97, 87, 255, .09), rgba(97, 87, 255, .035)); */
+    background: linear-gradient(180deg,
+            rgba(251, 191, 36, 0.12),
+            rgba(251, 191, 36, 0.04));
     border-radius: 999px;
     padding: 8px 12px;
-    box-shadow: 0 15px 50px rgba(77, 65, 248, 0.15);
+    /* box-shadow: 0 15px 50px rgba(77, 65, 248, 0.15); */
+    box-shadow: 0 15px 50px rgba(251, 191, 36, 0.15);
     animation: pillIn .8s .06s both;
 }
 
@@ -264,7 +271,7 @@ label {
     font-size: .7rem;
     letter-spacing: .13rem;
     font-weight: 800;
-    color: #6157ff;
+    color: #F59E0B;
 }
 
 .hero-copy h1 {
@@ -293,7 +300,7 @@ label {
 }
 
 .hero-copy h1 em {
-    background: linear-gradient(110deg, #5d56ff 8%, #8b5cf6 48%, #22d3ee 92%);
+    background: linear-gradient(110deg, #FBBF24 8%, #F59E0B 48%, #C2410C 92%);
     background-size: 220% auto;
     animation: textFlow 8s linear infinite;
     background-clip: text;
@@ -367,16 +374,19 @@ h1 em {
 .btn:hover {
     transform: translateY(-3px);
     /* box-shadow: 0 4px 10px rgba(0, 25, 75, 1.2); */
-    box-shadow: 0 15px 30px #635bff30;
+    /* box-shadow: 0 15px 30px #635bff30; */
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.30);
 }
 
 .primary {
-    background: linear-gradient(135deg, #6157ff, #a855f7);
-    color: white;
+    /* background: linear-gradient(135deg, #6157ff, #a855f7); */
+    background: linear-gradient(135deg, #FBBF24, #F59E0B, #C2410C);
+    /* color: white; */
+    color: #111111;
 }
 
 .ghost {
-    border: 1px solid #273249;
+    border: 1px solid #FBBF24;
 }
 
 .proof {
@@ -409,13 +419,14 @@ h1 em {
 .floating-chip {
     position: absolute;
     /* border-color: rgba(255, 255, 255, .72); */
-    border-color: #2c3550;
+    border-color: #F59E0B;
     border-radius: 14px;
     padding: 10px 14px;
     font-size: .68rem;
     font-weight: 800;
     background-color: rgba(255, 255, 255, .75);
-    box-shadow: 0 18px 35px rgba(32, 23, 94, .12);
+    /* box-shadow: 0 18px 35px rgba(32, 23, 94, .12); */
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.12);
     backdrop-filter: blur(16px);
     animation: chipFloat 5.5s ease-in-out infinite;
 }
@@ -434,7 +445,7 @@ h1 em {
 
 body.dark .floating-chip {
     background-color: rgba(17, 24, 39, .74);
-    border: 1px solid #273249;
+    border: 1px solid #F59E0B;
 }
 
 .hero-card {
@@ -452,9 +463,14 @@ body.dark .floating-chip {
 }
 
 body.dark .hero-card {
-    background: linear-gradient(145deg, rgba(19, 27, 47, .92));
-    border-color: #293455;
-    box-shadow: 0 35px 100px rgba(0, 0, 0, .36), 0 0 0 1px rgba(129, 140, 248, .08) inset;
+    border-color: #F59E0B;
+    background: linear-gradient(145deg,
+            rgba(251, 191, 36, 0.075),
+            rgba(245, 158, 11, 0.025));
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(245, 158, 11, 0.10),
+        inset 0 1px 0 rgba(251, 191, 36, 0.08);
 }
 
 @keyframes heroCardFloat {
@@ -480,8 +496,10 @@ body.dark .hero-card {
 }
 
 .hero-card:hover {
-    box-shadow: 0 40px 120px rgba(40, 31, 108, .23),
-        0 0 50px rgba(97, 87, 255, .10);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.50),
+        0 0 40px rgba(245, 158, 11, 0.16),
+        inset 0 1px 0 rgba(251, 191, 36, 0.12);
 }
 
 .card-head {
@@ -667,10 +685,10 @@ body.dark .hero-card {
 }
 
 .heading label {
-    font-size: .77rem;
-    letter-spacing: .13rem;
+    font-size: .82rem;
+    letter-spacing: .15rem;
     font-weight: 800;
-    color: #6157ff;
+    color: #F59E0B;
 }
 
 
@@ -914,14 +932,14 @@ article {
     transition: .3s;
 }
 
-body.dark .skill{
+body.dark .skill {
     border: 1px solid #493f3f;
 }
 
 body.dark .skill:hover {
     transform: translateY(-7px);
     box-shadow: 0 12px 20px rgba(11, 9, 32, 0.55);
-    
+
 }
 
 .skill:hover {
@@ -944,12 +962,12 @@ body.dark .skill:hover {
     font-size: 1.4rem;
 }
 
-.skill:hover .sym{
+.skill:hover .sym {
     transform: translateY(-6px);
     color: #F59E0B;
 }
 
-body.dark .skill:hover .sym{
+body.dark .skill:hover .sym {
     transform: translateY(-6px);
     color: #F59E0B;
 }
@@ -975,10 +993,11 @@ body.dark .skill h3 {
     margin-top: 15px;
 }
 
-body.dark .skill button:hover{
+body.dark .skill button:hover {
     border: 1px solid #6b6257;
 }
-.skill button:hover{
+
+.skill button:hover {
     /* transform: translateY(-2px); */
     background: #29342D;
     color: #ffffffff;
@@ -1010,7 +1029,7 @@ body.dark .skill button:hover{
     transition: .5s;
 }
 
-    /* body.dark .skill {
+/* body.dark .skill {
         background-color: #29342D;
         color: #667085;
         border: 1px solid #273249;
