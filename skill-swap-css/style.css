@@ -885,7 +885,7 @@ body.dark.search:focus-within {
 }
 
 .cat {
-    border: 1px solid #868686;
+    border: 1px solid rgb(252, 207, 94);
     padding: 8px 14px;
     border-radius: 999px;
     font-weight: 700;
