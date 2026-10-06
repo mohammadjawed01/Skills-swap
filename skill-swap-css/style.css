@@ -331,12 +331,12 @@ body.dark .nav-text span:first-child {
     gap: 8px; */
     position: absolute;
     right: 42px;
-    top: 24px;
+    top: 32px;
     display: flex;
     align-items: center;
     gap: 9px;
     transition:
-        opacity .45s ease,
+        opacity .6s ease,
         transform .55s cubic-bezier(.2, .8, .2, 1);
 }
 
@@ -370,34 +370,26 @@ body.dark .nav-text span:first-child {
     background: linear-gradient(135deg, #FBBF24, #F59E0B, #C2410C); */
 
     position: relative;
-    width: 48px;
+    width: 44px;
     height: 44px;
     border: 1px solid rgba(245, 158, 11, .25);
-    border-radius: 13px;
-    background:
+    border-radius: 50%;
+    /* background:
         linear-gradient(145deg,
             #181610,
-            #0c0b09);
-    color: #eee8dc;
+            #0c0b09); */
+    background: linear-gradient(135deg, #FBBF24, #F59E0B, #C2410C);
+    color: #222222;
+    font-weight: 550;
+    border: 0;
     cursor: pointer;
-    box-shadow:
-        0 5px 0 #020202;
+    /* box-shadow:
+        0 5px 0 #020202; */
     transition:
         transform .45s cubic-bezier(.2, .8, .2, 1),
         box-shadow .45s ease;
 }
 
-.action #profile i {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #F59E0B;
-    box-shadow:
-        0 0 9px rgba(245, 158, 11, .8);
-}
 
 .action #theme {
     /* transition: background-color 0.5s, color 0.5s, border-color 0.5s; */
@@ -423,7 +415,7 @@ body.dark .nav-text span:first-child {
         transform .6s cubic-bezier(.2, .8, .2, 1);
 }
 
-body.dark #theme {
+body.dark #theme{
     background-color: #111827;
     color: white;
     border-color: #222e46;
