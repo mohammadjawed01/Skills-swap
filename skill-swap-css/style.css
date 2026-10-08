@@ -616,10 +616,8 @@ h1 em {
     left: 150%;
 }
 
-.btn:hover {
+.primary:hover {
     transform: translateY(-3px);
-    /* box-shadow: 0 4px 10px rgba(0, 25, 75, 1.2); */
-    /* box-shadow: 0 15px 30px #635bff30; */
     box-shadow: 0 10px 30px rgba(245, 158, 11, 0.30);
 }
 
@@ -633,6 +631,7 @@ h1 em {
 .ghost {
     border: 1px solid #FBBF24;
 }
+
 
 .proof {
     display: flex;

@@ -130,14 +130,18 @@ body.dark .form label{
 }
 
 .form input {
-    background-color: #172033;
+    background-color: #dfdbffc7;
     padding: 11px;
     width: 100%;
     border: 1px solid #273249;
     border-radius: 10px;
-    color: #eeecff;
+    color: #060707;
 }
 
+body.dark .form input{
+    background: #060707;
+    color: #eeecff;
+}
 
 .form input:focus {
     border: 1px solid #101520;
@@ -186,44 +190,3 @@ body.dark .check{
     width: 100%;
 }
 
-.primary {
-    color: #ffffff;
-    background: linear-gradient(135deg, #6157ff, #a855f7);
-}
-
-.btn {
-    border: 0;
-    border-radius: 8px;
-    padding: 13px 19px;
-    font-weight: 700;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: .25s;
-    margin-top: 14px;
-}
-
-.btn:after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -100%;
-    width: 60%;
-    height: 200%;
-    background: linear-gradient(90deg, transparent, #fff5, transparent);
-    transform: skewX(-20deg);
-    transition: .55s;
-}
-
-.btn:hover:after {
-    left: 150%;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px #635bff30;
-}
