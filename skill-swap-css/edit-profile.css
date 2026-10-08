@@ -41,8 +41,8 @@ body {
 
 .edit-profile {
     width: min(560px, 100%);
-    /* background: #ffffff; */
-    background: #060707;
+    background: #ffffff;
+    color: #101520;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 22px;
     position: relative;
@@ -55,6 +55,10 @@ body {
 
 }
 
+body.dark .edit-profile {
+    background: #060707;
+    color: #ffffff;
+}
 .edit-profile #close {
     position: absolute;
     top: 16px;
@@ -64,9 +68,15 @@ body {
     border: 0;
     border-radius: 50%;
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: #060707;
+    color: #f0f0f0;
     font-size: 1rem;
     font-weight: 500;
+}
+
+body.dark .edit-profile #close{
+    background: #f0f0f0;
+    color: #060707;
 }
 
 h2 {
@@ -80,6 +90,7 @@ h2 {
     unicode-bidi: isolate;
     padding: 0;
     margin: 12px 0 8px 0;
+    color: #F59E0B;
 }
 
 .edit-profile-body p {
@@ -96,7 +107,11 @@ p {
 }
 
 p {
-    color: lightgray;
+    color: #060707;
+}
+
+body.dark p{
+    color: #eeecff;
 }
 
 .form {
@@ -107,7 +122,11 @@ p {
     display: block;
     margin: 0 0 8px 0;
     font-size: .7rem;
-    color: #38A5BA
+    color: #060707;
+}
+
+body.dark .form label{
+    color: #eeecff;
 }
 
 .form input {
@@ -116,8 +135,9 @@ p {
     width: 100%;
     border: 1px solid #273249;
     border-radius: 10px;
-    color: white;
+    color: #eeecff;
 }
+
 
 .form input:focus {
     border: 1px solid #101520;
@@ -131,18 +151,28 @@ p {
 }
 
 .check.sel {
-    background-color: #eeecff;
-    color: #5145cd;
+    background-color: #060707;
+    color: #F59E0B;
     font-weight: 700;
-    border-color: #c7c3ff;
+    border-color: #F59E0B;
+}
+
+body.dark .check.sel{
+    background: #F59E0B;
+    color: #060707;
+    border-color: #060707;
 }
 
 .check {
     border-radius: 8px;
     padding: 7px 9px;
-    border: 1px solid #273249;
+    border: 1px solid #060707;
     font-size: .7rem;
     cursor: pointer;
+}
+
+body.dark .check{
+    border: 1px solid #dfdbffc7;
 }
 
 /* .clk {
