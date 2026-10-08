@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skill-Swap</title>
     <link rel="stylesheet" href="skill-swap-css/style.css">
-    <!-- <link rel="stylesheet" href="skill-swap-css/edit-profile.css"> -->
+    <link rel="stylesheet" href="skill-swap-css/edit-profile.css">
 </head>
 
 <body>
@@ -16,12 +16,12 @@
             <div class="logo-box">
                 <b>&#8644;</b>
             </div>
-            
+
             <div class="logo-text">
                 Skill
-            <span>Swap</span>
+                <span>Swap</span>
             </div>
-            
+
         </a>
 
         <nav class="links">
@@ -56,7 +56,7 @@
                 <span>🌙</span>
             </button>
             <button id="profile">
-                <span>MJ</span>
+                <span></span>
             </button>
         </div>
     </header>
@@ -132,6 +132,60 @@
                 <div class="floating-chip bottom">&#128994; 120+ active learners</div>
             </div>
         </section>
+
+        <!-- profile section -->
+    <div id="modal" class="model-bg show">
+        <div class="edit-profile">
+            <button id="close">×</button>
+            <div class="edit-profile-body">
+                <h2>Edit your Skills</h2>
+                <p>Choose what you teach and what you want to learn.</p>
+
+                <div class="form">
+                    <label>Your name</label>
+                    <input type="text" placeholder="Enter your Full Name" value="name" required>
+                </div>
+
+                <div class="form">
+                    <label>I CAN TEACH</label>
+                    <div class="checks" id="ct1">
+                        <span class="check" data-ve="JavaScript">JavaScript</span>
+                        <span class="check" data-ve="React">React</span>
+                        <span class="check" data-ve="Python">Python</span>
+                        <span class="check" data-ve="UI/UX Design">UI/UX Design</span>
+                        <span class="check" data-ve="Photoshop">Photoshop</span>
+                        <span class="check" data-ve="Video Editing">Video Editing</span>
+                        <span class="check" data-ve="Excel">Excel</span>
+                        <span class="check" data-ve="Public Speaking">Public Speaking</span>
+                        <span class="check" data-ve="CSS">CSS</span>
+                        <span class="check" data-ve="Git">Git</span>
+                        <span class="check" data-ve="Figma">Figma</span>
+                        <span class="check" data-ve="Canva">Canva</span>
+                        </span>
+                    </div>
+
+                    <div class="form">
+                        <label>I WANT TO LEARN</label>
+                        <div class="checks" id="ct2">
+                            <span class="check" data-ve="JavaScript">JavaScript</span>
+                            <span class="check" data-ve="React">React</span>
+                            <span class="check" data-ve="Python">Python</span>
+                            <span class="check" data-ve="UI/UX Design">UI/UX Design</span>
+                            <span class="check" data-ve="Photoshop">Photoshop</span>
+                            <span class="check" data-ve="Video Editing">Video Editing</span>
+                            <span class="check" data-ve="Excel">Excel</span>
+                            <span class="check" data-ve="Public Speaking">Public Speaking</span>
+                            <span class="check" data-ve="CSS">CSS</span>
+                            <span class="check" data-ve="Git">Git</span>
+                            <span class="check" data-ve="Figma">Figma</span>
+                            <span class="check" data-ve="Canva">Canva</span>
+                        </div>
+                    </div>
+                    <button class="btn primary full" id="save">Save profile</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <!-- second -->
         <section class="section" id="how">
