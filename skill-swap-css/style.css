@@ -1017,15 +1017,15 @@ body.dark .hero-card {
     position: absolute;
     top: 24px;
     right: 26px;
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 800;
     color: transparent;
     -webkit-text-stroke: 1px #666;
-    transition: .4s ease;
+    transition:all .4s ease;
 }
 
 .feature:hover span{
-    transform: scale(1.15);
+    transform: translateX(-10px);
     -webkit-text-stroke: 1px #F59E0B
 }
 
@@ -1038,13 +1038,14 @@ body.dark .hero-card {
     display: grid;
     place-items: center;
     font-size: 1.3rem;
+    margin-top: 14px;
     margin-bottom: 22px;
     transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s;
 }
 
 .feature:hover .icon {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 12px 20px rgba(18, 49, 16, 0.658);
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(49, 40, 16, 0.658);
 }
 
 .feature.icon {
