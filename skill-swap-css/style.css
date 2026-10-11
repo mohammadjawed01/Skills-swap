@@ -415,7 +415,7 @@ body.dark .nav-text span:first-child {
         transform .6s cubic-bezier(.2, .8, .2, 1);
 }
 
-body.dark #theme{
+body.dark #theme {
     background-color: #111827;
     color: white;
     border-color: #222e46;
@@ -953,26 +953,33 @@ body.dark .hero-card {
 .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s;
+    gap: 32px;
+}
+
+.steps article {
+    transition: transform 0.6s cubic-bezier(.2, .8, .2, 1),
+    border-color .4s ease,
+    color .4s ease;
 }
 
 .steps article:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 12px 20px rgba(9, 32, 13, 0.55);
+    transform: translateY(-10px);
+    border-color:
+        rgba(245, 158, 11, .5);
+    /* box-shadow: 0 12px 20px rgba(9, 32, 13, 0.55); */
+    color: #F59E0B;
 }
 
 .feature {
     padding: 30px;
     overflow: hidden;
-    border-radius: 22px;
-    /* border: 1px solid #273249; */
+    border: 1px solid transparent;
+    border-radius: 14px;
     position: relative;
-    animation: headingFadeUpSoft 1.05s .85s both;
     height: 320px;
 }
 
-@keyframes headingFadeUpSoft {
+/* @keyframes headingFadeUpSoft {
     0% {
         opacity: 0;
         transform: translateY(18px);
@@ -984,7 +991,7 @@ body.dark .hero-card {
         transform: none;
         filter: none;
     }
-}
+} */
 
 .feature::before {
     content: "";
@@ -997,7 +1004,7 @@ body.dark .hero-card {
     transition: .5s;
 }
 
-.feature,
+/* .feature, */
 .skill,
 .match,
 .stat,
@@ -1013,7 +1020,13 @@ body.dark .hero-card {
     font-size: 42px;
     font-weight: 800;
     color: transparent;
-    -webkit-text-stroke: 1px #25e946;
+    -webkit-text-stroke: 1px #666;
+    transition: .4s ease;
+}
+
+.feature:hover span{
+    transform: scale(1.15);
+    -webkit-text-stroke: 1px #F59E0B
 }
 
 .icon {
@@ -1021,7 +1034,7 @@ body.dark .hero-card {
     width: 48px;
     background-color: #eeecff;
     border-radius: 14px;
-    color: #25e946;
+    color: #222222;
     display: grid;
     place-items: center;
     font-size: 1.3rem;
@@ -1034,7 +1047,7 @@ body.dark .hero-card {
     box-shadow: 0 12px 20px rgba(18, 49, 16, 0.658);
 }
 
-.feature .icon {
+.feature.icon {
     transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s;
 }
 
@@ -1053,7 +1066,9 @@ body.dark .hero-card {
     font-weight: 500;
     letter-spacing: -1px;
     margin-bottom: 13px;
+    transition: .14s;
 }
+
 
 .steps p {
     position: absolute;
