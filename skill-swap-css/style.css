@@ -969,6 +969,7 @@ body.dark .hero-card {
     /* border: 1px solid #273249; */
     position: relative;
     animation: headingFadeUpSoft 1.05s .85s both;
+    height: 320px;
 }
 
 @keyframes headingFadeUpSoft {
@@ -1007,10 +1008,12 @@ body.dark .hero-card {
 
 .feature span {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 24px;
+    right: 26px;
+    font-size: 42px;
     font-weight: 800;
-    color: #25e946;
+    color: transparent;
+    -webkit-text-stroke: 1px #25e946;
 }
 
 .icon {
@@ -1036,20 +1039,30 @@ body.dark .hero-card {
 }
 
 .steps h3 {
-    display: block;
-    font-size: 1.17rem;
+    /* display: block; */
+    /* font-size: 1.17rem; */
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
+    /* font-weight: bold; */
     unicode-bidi: isolate;
+    position: absolute;
+    bottom: 80px;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-bottom: 13px;
 }
 
 .steps p {
+    position: absolute;
+    bottom: 10px;
+    max-width: 285px;
     font-size: .86rem;
-    color: #98a5ba;
-    margin-top: 8px;
+    color: #666;
+    /* margin-top: 8px; */
+    line-height: 1.75;
 }
 
 p {
