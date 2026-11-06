@@ -27,6 +27,16 @@ body {
     transform: translateY(0);
 }
 
+#minicircle {
+    height: 12px;
+    width: 12px;
+    background-color: wheat;
+    border-radius: 50%;
+    z-index: 999;
+    position: absolute;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
 div {
     display: block;
     unicode-bidi: isolate;
