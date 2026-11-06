@@ -1,5 +1,5 @@
+// for the scroll reveal effect Animation
 const elements = document.querySelectorAll(".reveal");
-
 const observer = new IntersectionObserver((entries) => {
 
     entries.forEach((entry) => {
@@ -10,10 +10,17 @@ const observer = new IntersectionObserver((entries) => {
     });
 
 });
-
 elements.forEach((element) => {
     observer.observe(element);
-}); 
+});
+
+// for the mousemove circle on when we move the mouse on the page
+function circlefollowanimation(){
+    window.addEventListener("mousemove", function(e){
+        this.document.querySelector("#minicircle").style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    })
+}
+circlefollowanimation()
 
 // theme button change the dark and light mode
 let theme = document.querySelector("#theme");
