@@ -1,3 +1,20 @@
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+        entry.target.classList.toggle(
+            "show",
+            entry.isIntersecting
+        );
+    });
+
+});
+
+elements.forEach((element) => {
+    observer.observe(element);
+}); 
+
 // theme button change the dark and light mode
 let theme = document.querySelector("#theme");
 let savedTheme = localStorage.getItem("theme");
