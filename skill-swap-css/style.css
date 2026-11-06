@@ -30,11 +30,14 @@ body {
 #minicircle {
     height: 12px;
     width: 12px;
-    background-color: wheat;
+    background-color: #F59E0B;
+    box-shadow: 0 0px 13px rgba(243, 182, 29, 0.705);
     border-radius: 50%;
-    z-index: 999;
-    position: absolute;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    z-index: 99999;
+    position: fixed;
+    transition: transform 0.15s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: center;
+    pointer-events: none;
 }
 
 div {
