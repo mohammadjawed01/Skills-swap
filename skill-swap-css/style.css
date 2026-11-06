@@ -15,6 +15,18 @@ body {
     overflow-x: hidden;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: 0.8s ease;
+}
+
+/* When visible */
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 div {
     display: block;
     unicode-bidi: isolate;
