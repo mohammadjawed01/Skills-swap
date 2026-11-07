@@ -15,12 +15,34 @@ elements.forEach((element) => {
 });
 
 // for the mousemove circle on when we move the mouse on the page
-function circlefollowanimation(){
-    window.addEventListener("mousemove", function(e){
-        this.document.querySelector("#minicircle").style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    })
+let timeout;
+function mousefollowanimation() {
+    let xprev = 0;
+    let yprev = 0;
+    let xscale = 1;
+    let yscale = 1;
+    window.addEventListener('mousemove', function (e) {
+        const minicircle = document.querySelector("#minicircle");
+
+        let xdiff = e.clientX - xprev;
+        let ydiff = e.clientY - yprev;
+
+        xscale = Math.min(1.2, Math.max(0.8, 1 + xdiff * 0.01));
+        yscale = Math.min(1.2, Math.max(0.8, 1 + ydiff * 0.01));
+
+        xprev = e.clientX;
+        yprev = e.clientY;
+
+        clearTimeout(timeout);
+
+        minicircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px) scale(${xscale}, ${yscale})`;
+
+        timeout = setTimeout(function () {
+            minicircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px) scale(1,1)`;
+        }, 100)
+    });
 }
-circlefollowanimation()
+mousefollowanimation();
 
 // theme button change the dark and light mode
 let theme = document.querySelector("#theme");
@@ -84,48 +106,48 @@ let form = document.querySelector("form").addEventListener('submit', function (e
         console.log("Teach:", selectedTeachskills);
         console.log("Learn:", selectedLearnskills);
         modelShow.style.display = "none";
-    })  
+    })
 })
 
- // save the input value to local Storage
-    let input = document.querySelector("input[type='text']");
-    let profileSpan = document.querySelector("#profile span");
-    let savedName = localStorage.getItem("inputValue");
-    if (savedName) {
-        input.value = savedName;
-        profileSpan.textContent = savedName.trim().charAt(0).toUpperCase();
+// save the input value to local Storage
+let input = document.querySelector("input[type='text']");
+let profileSpan = document.querySelector("#profile span");
+let savedName = localStorage.getItem("inputValue");
+if (savedName) {
+    input.value = savedName;
+    profileSpan.textContent = savedName.trim().charAt(0).toUpperCase();
+}
+// localStorage.getItem("inputValue") ? input.value = localStorage.getItem("inputValue") : input.value = "";
+input.addEventListener('input', function () {
+    let str = input.value.trim();
+    if (str.length > 0) {
+        profileSpan.textContent = str.charAt(0).toUpperCase();
     }
-    // localStorage.getItem("inputValue") ? input.value = localStorage.getItem("inputValue") : input.value = "";
-    input.addEventListener('input', function () {
-        let str = input.value.trim();
-        if (str.length > 0) {
-            profileSpan.textContent = str.charAt(0).toUpperCase();
-        }
-        else {
-            profileSpan.textContent = "";
-        }
-        localStorage.setItem("inputValue", str);
-        // document.querySelector("#name").value;
-    })
+    else {
+        profileSpan.textContent = "";
+    }
+    localStorage.setItem("inputValue", str);
+    // document.querySelector("#name").value;
+})
 
 // check the selected skills and add or remove the class sel when the user click in the skill'
-    let check = document.querySelectorAll(".check");
-    let sel = document.querySelectorAll(".sel");
-    check.forEach(function (skills) {
-        skills.addEventListener('click', function () {
-            this.classList.toggle("sel")
-        });
-    })
-
-    // restore the selected skills from local storage when the page is reloaded
-    teachSkills.querySelectorAll(".check").forEach(function (skill) {
-        if (savedTeachSkills.includes(skill.dataset.ve)) {
-            skill.classList.add("sel");
-        }
+let check = document.querySelectorAll(".check");
+let sel = document.querySelectorAll(".sel");
+check.forEach(function (skills) {
+    skills.addEventListener('click', function () {
+        this.classList.toggle("sel")
     });
+})
 
-    learnSkills.querySelectorAll(".check").forEach(function (skill) {
-        if (savedLearnSkills.includes(skill.dataset.ve)) {
-            skill.classList.add("sel");
-        }
-    });
+// restore the selected skills from local storage when the page is reloaded
+teachSkills.querySelectorAll(".check").forEach(function (skill) {
+    if (savedTeachSkills.includes(skill.dataset.ve)) {
+        skill.classList.add("sel");
+    }
+});
+
+learnSkills.querySelectorAll(".check").forEach(function (skill) {
+    if (savedLearnSkills.includes(skill.dataset.ve)) {
+        skill.classList.add("sel");
+    }
+});
