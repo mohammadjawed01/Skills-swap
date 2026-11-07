@@ -16,32 +16,40 @@ elements.forEach((element) => {
 
 // for the mousemove circle on when we move the mouse on the page
 let timeout;
+
+let xprev = 0;
+let yprev = 0;
+
+const minicircle = document.querySelector("#minicircle");
+
 function mousefollowanimation() {
-    let xprev = 0;
-    let yprev = 0;
-    let xscale = 1;
-    let yscale = 1;
-    window.addEventListener('mousemove', function (e) {
-        const minicircle = document.querySelector("#minicircle");
+
+    window.addEventListener("mousemove", function (e) {
 
         let xdiff = e.clientX - xprev;
         let ydiff = e.clientY - yprev;
 
-        xscale = Math.min(1.2, Math.max(0.8, 1 + xdiff * 0.01));
-        yscale = Math.min(1.2, Math.max(0.8, 1 + ydiff * 0.01));
+        let xscale = Math.min(1.2, Math.max(0.8, 1 + xdiff * 0.01));
+        let yscale = Math.min(1.2, Math.max(0.8, 1 + ydiff * 0.01));
 
         xprev = e.clientX;
         yprev = e.clientY;
 
         clearTimeout(timeout);
 
-        minicircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px) scale(${xscale}, ${yscale})`;
+        minicircle.style.transform =
+            `translate(${e.clientX}px, ${e.clientY}px) scale(${xscale}, ${yscale})`;
 
         timeout = setTimeout(function () {
-            minicircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px) scale(1,1)`;
-        }, 100)
+
+            minicircle.style.transform =
+                `translate(${e.clientX}px, ${e.clientY}px) scale(1, 1)`;
+
+        }, 100);
+
     });
 }
+
 mousefollowanimation();
 
 // theme button change the dark and light mode
