@@ -36,10 +36,22 @@ body {
     box-shadow: 0 0 13px rgba(243, 182, 29, 0.705);
     border-radius: 50%;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 99999;
     pointer-events: none;
     transform-origin: center;
-    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 1;
+    visibility: visible;
+    transition: 
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#minicircle.hide {
+    visibility: hidden;
+    opacity: 0;
 }
 
 div {
