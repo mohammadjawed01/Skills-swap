@@ -37,6 +37,8 @@ function mousefollowanimation() {
 
         clearTimeout(timeout);
 
+        minicircle.style.display = "block";
+
         minicircle.style.transform =
             `translate(${e.clientX}px, ${e.clientY}px) scale(${xscale}, ${yscale})`;
 
@@ -46,8 +48,16 @@ function mousefollowanimation() {
                 `translate(${e.clientX}px, ${e.clientY}px) scale(1, 1)`;
 
         }, 100);
-
     });
+
+    document.addEventListener("mouseleave", function(){
+        minicircle.classList.add("hide");
+        clearTimeout(timeout);
+    });
+
+    document.addEventListener("mouseenter", function (){
+        minicircle.classList.remove("hide");
+    })
 }
 
 mousefollowanimation();
