@@ -50,6 +50,7 @@ function mousefollowanimation() {
         }, 100);
     });
 
+    // hide the minicircle when the mouse leaves the document and show it when the mouse enters the document
     document.addEventListener("mouseleave", function(){
         minicircle.classList.add("hide");
         clearTimeout(timeout);
